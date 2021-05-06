@@ -47,23 +47,17 @@
                                     <a href="/" style="color: var(--main-color); opacity: 100%; font-weight: bold;">conditions générales</a>
                                 </label>
                             </div>
-                            <button class="form-cta">S'INSCRIRE</button>
+                            <button type="button" aria-describedby="tooltip" id="formCta" class="form-cta">S'INSCRIRE</button>
+                            <div id="tooltip" role="tooltip" class="alert alert-warning"></div>
                         </form>
                     </div>
                 </div>
                 <div class="col-7 px-0 illustration"></div>
             </div>        
         </div>
-
-        <script>
-            for (let index = 0 ; index < document.getElementsByClassName('form-input').length ; index++) { 
-                document.getElementsByClassName('form-input')[index].children[0].addEventListener('input', (event) => {
-                    let selected_input = document.getElementsByClassName('form-input')[index];
-                    selected_input.children[1].style.visibility = (selected_input.children[0].value != "") ? 'hidden' : 'visible'; 
-                } ) 
-            }
-        </script>
+        
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
     </body>
 </html>

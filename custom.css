@@ -29,6 +29,8 @@ form { padding-top: .25rem; }
 .form-cta:hover { background-color: var(--main-color-darker); }
 .form-cta:active { border: 1px solid var(--main-color); background-color: white; color: var(--main-color-darker); }
 
+#tooltip { visibility: hidden; text-align: center; padding-top: .75rem; font-size: .85rem; }
+
 .illustration { height: 100%; background: url('./images/signup_illustration.png') 0% 30% no-repeat; background-size: cover; }
 
 @media screen and (min-width: 0px) {

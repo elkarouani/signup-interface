@@ -5,7 +5,8 @@ const check_email_validation = () => {
 }
 
 const check_password_validation = () => { 
-    let main_condition = ( 4 < document.getElementById('PasswordInput').value.length < 6 );
+    let main_condition = ( 4 > document.getElementById('PasswordInput').value.length < 6 );
+    console.log(main_condition)
     if(!main_condition) { document.getElementById('tooltip').innerText = "Le mot de passe ne respecte pas les rêgles !" }
     return main_condition;
 }
@@ -16,10 +17,17 @@ const check_confirm_password_validation = () => {
     return main_condition;
 }
 
+const check_accept_rules_validation = () => { 
+    let main_condition = document.getElementById('AcceptRules').checked
+    if(!main_condition) { document.getElementById('tooltip').innerText = "Veuillez accepter les rêgles générales !" }
+    return main_condition;
+}
+
 const check_validation = () => {
     if(!check_email_validation()) return false
     if(!check_password_validation()) return false
     if(!check_confirm_password_validation()) return false
+    if(!check_accept_rules_validation()) return false
     return true
 }   
 

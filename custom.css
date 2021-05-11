@@ -27,7 +27,7 @@ form { padding-top: .25rem; }
 .form-input input:focus { border-color: var(--main-color); border-width: 2px; outline: none; }
 .form-input input:focus + label { top: -.4rem; color: var(--main-color); background-color: white; font-size: .75rem; opacity: 100%; font-weight: bold; } 
 
-/* Sign In Call To Action style */
+/* Sign Up Call To Action style */
 .form-cta { 
     border: none; background-color: var(--main-color); border-radius: 4px;
     font-size: .80rem; color: white; letter-spacing: 1px; font-weight: 300;

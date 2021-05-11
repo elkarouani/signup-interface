@@ -1,3 +1,4 @@
+/* Font And Colors Specifications */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 :root {
     --body-background-color: #FAFCFD;
@@ -8,11 +9,17 @@
 }
 *{ font-family: 'Roboto', sans-serif; }
 
+/* Body and Container style */
+body { width: auto; height: 100vh; background-color: var(--body-background-color); }
+#SignInContainer { background-color: var(--container-background-color); color: var(--default-text-color); }
+
+/* Main Content General style */
 .subheader { opacity: 80%; }
 .user-icon { background-color: var(--main-color); width: fit-content; top: -1rem; }
 .header { padding-top: 2rem; }
 form { padding-top: .25rem; }
 
+/* Form Input Group style */
 .form-input { position: relative; }
 .form-input + .form-input { margin: .5rem 0; }
 .form-input label { position: absolute; top: 1rem; left: 1rem; padding: 0 .2rem; font-size: 1rem; opacity: 80%; transition: all .2s linear; }
@@ -20,6 +27,7 @@ form { padding-top: .25rem; }
 .form-input input:focus { border-color: var(--main-color); border-width: 2px; outline: none; }
 .form-input input:focus + label { top: -.4rem; color: var(--main-color); background-color: white; font-size: .75rem; opacity: 100%; font-weight: bold; } 
 
+/* Sign In Call To Action style */
 .form-cta { 
     border: none; background-color: var(--main-color); border-radius: 4px;
     font-size: .80rem; color: white; letter-spacing: 1px; font-weight: 300;
@@ -29,10 +37,20 @@ form { padding-top: .25rem; }
 .form-cta:hover { background-color: var(--main-color-darker); }
 .form-cta:active { border: 1px solid var(--main-color); background-color: white; color: var(--main-color-darker); }
 
+/* Accept Rules Style */
+.accept-rules label { font-size: .75rem; padding-left: .5rem; opacity: 80%; }
+.accept-rules a { color: var(--main-color); opacity: 100%; font-weight: bold; }
+
+/* Warning Alert style */
 #tooltip { visibility: hidden; text-align: center; padding-top: .75rem; font-size: .85rem; }
 
+/* Illustration Block style */
 .illustration { height: 100%; background: url('./images/signup_illustration.png') 0% 30% no-repeat; background-size: cover; }
 
+
+/* Responsive Specifications */
+
+/* For Mobile Devices ( Large size | Medium size | Small size ) */
 @media screen and (min-width: 0px) {
     .user-icon { left: 45%; }
     .main-content { display: flex; flex-direction: column; align-items: center; }
@@ -42,11 +60,13 @@ form { padding-top: .25rem; }
     .illustration { display: none; }
 }
 
+/* For Tablet Devices */
 @media screen and (min-width: 425px) {
     .form-input input { width: 20rem; }
     .form-cta { padding: 1rem 7.25rem; margin-top: 2rem; }
 }
 
+/* For Small Laptops Devices */
 @media only screen and (min-width: 768px) {
     .main-content { display: block; }
     .header { text-align: left; }
@@ -58,11 +78,13 @@ form { padding-top: .25rem; }
     .user-icon { left: 1rem; }
 }
 
+/* For Medium Laptop Devices */
 @media only screen and (min-width: 992px) {
     .form-cta { padding: 1rem 8.25rem; }
     .form-input input { width: 22rem; }
 }
 
+/* For Large and 4K Laptop Devices */
 @media only screen and (min-width: 1440px) {
     .user-icon { left: 45%; }
     .header { margin-top: 1rem; text-align: center; }

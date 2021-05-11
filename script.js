@@ -1,9 +1,11 @@
+// Validation for [ Address E-mail ] Field
 const check_email_validation = () => { 
     let main_condition = /\S+@\S+\.\S+/.test(document.getElementById('AddressInput').value);
     if(!main_condition) { document.getElementById('tooltip').innerText = "L'addresse e-mail n'est pas correcte !" }
     return main_condition;
 }
 
+// Validation for [ Password ] Field
 const check_password_validation = () => { 
     let main_condition = ( 4 > document.getElementById('PasswordInput').value.length < 6 );
     console.log(main_condition)
@@ -11,18 +13,21 @@ const check_password_validation = () => {
     return main_condition;
 }
 
+// Validation for [ Confirm Password ] Field
 const check_confirm_password_validation = () => { 
     let main_condition = ( document.getElementById('ConfirmPasswordInput').value == document.getElementById('PasswordInput').value )
     if(!main_condition) { document.getElementById('tooltip').innerText = "Veuillez bien confirmer le mot de passe !" }
     return main_condition;
 }
 
+// Validation for [ Accept Rules ] Field
 const check_accept_rules_validation = () => { 
     let main_condition = document.getElementById('AcceptRules').checked
     if(!main_condition) { document.getElementById('tooltip').innerText = "Veuillez accepter les rêgles générales !" }
     return main_condition;
 }
 
+// Validations Controller
 const check_validation = () => {
     if(!check_email_validation()) return false
     if(!check_password_validation()) return false
@@ -31,6 +36,7 @@ const check_validation = () => {
     return true
 }   
 
+// Sign In Call To Action Events
 document.getElementById('formCta').addEventListener('click', (event) => {
     if (!check_validation()) {
         document.getElementById('tooltip').style.visibility = 'visible';
@@ -41,6 +47,7 @@ document.getElementById('formCta').addEventListener('click', (event) => {
 }) 
 document.getElementById('formCta').addEventListener('blur', (event) => { document.getElementById('tooltip').style.visibility = 'hidden' } ) 
 
+// Form Input Groups Events
 for (let index = 0 ; index < document.getElementsByClassName('form-input').length ; index++) { 
     document.getElementsByClassName('form-input')[index].children[0].addEventListener('input', (event) => {
         let selected_input = document.getElementsByClassName('form-input')[index];
